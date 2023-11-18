@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Mi calculadora</h1>
+    </header>
+
+    <nav></nav>
+
+    <section>
+        <label for="idnumero1">Numero 1: </label>
+        <input type="number" id="idnumero1">
+        <label for="idnumero2">Numero 2: </label>
+        <input type="number" id="idnumero2">
+
+        <button onclick="document.getElementById('idnumero1').style.color='blue'">Cambiar Estilo 1</button>
+        <button onclick="document.getElementById('idnumero2').style.background='red'">Cambiar Estilo 2</button>
+        <button onclick="document.getElementById('idresultado').innerHTML=1+3">Presentar resultado</button>
+        
+        <button onclick="document.getElementById('iddiv').innerHTML='<button>HOLA</button>'">Agregar elemento HTML</button>
+
+
+        <label id="idresultado" for=""></label>
+
+        <div id="iddiv">
+            <!-- <button>HOLA</button> -->
+        </div>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Game_and_Watch_Super_Mario_Bros.PNG"
+            alt="no hay imagen" id="idimagen1">
+        <button
+            onclick="document.getElementById('idimagen1').src='https://upload.wikimedia.org/wikipedia/commons/1/1d/Shigeru_Miyamoto_20150610_%28cropped_2%29.jpg'">Cambiar
+            imagen</button>
+    </section>
+    <footer>Todos los derechos reservados</footer>
+</body>
+
+</html>
