@@ -5,6 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script>
+        function sumarNumeros(primero, segundo) {
+            var n1 = parseInt(primero);
+            var n2 = parseInt(segundo)
+
+            console.log("funcion sumar numero uno:" + n1)
+            console.log("funcion sumar numeros dos:" + n2)
+            var resultado = n1 + n2;
+            console.log(resultado)
+            document.getElementById('idResultado2').innerText = resultado
+            return resultado;
+        }
+
+        function sumarNumerosCompleto(primero, segundo) {
+            var n1 = parseInt(document.getElementById('idnumero1').value);
+            var n2 = parseInt(document.getElementById('idnumero2').value)
+
+            console.log("funcion sumar numero uno:" + n1)
+            console.log("funcion sumar numeros dos:" + n2)
+            var resultado = n1 + n2;
+            console.log(resultado)
+            document.getElementById('idResultado2').innerText = resultado
+            return resultado;
+        }
+
+        function restarNumeros(primero, segundo) {
+            return primero - segundo;
+        }
+    </script>
+
 </head>
 
 <body>
@@ -23,8 +54,9 @@
         <button onclick="document.getElementById('idnumero1').style.color='blue'">Cambiar Estilo 1</button>
         <button onclick="document.getElementById('idnumero2').style.background='red'">Cambiar Estilo 2</button>
         <button onclick="document.getElementById('idresultado').innerHTML=1+3">Presentar resultado</button>
-        
-        <button onclick="document.getElementById('iddiv').innerHTML='<button>HOLA</button>'">Agregar elemento HTML</button>
+
+        <button onclick="document.getElementById('iddiv').innerHTML='<button>HOLA</button>'">Agregar elemento
+            HTML</button>
 
 
         <label id="idresultado" for=""></label>
@@ -33,11 +65,23 @@
             <!-- <button>HOLA</button> -->
         </div>
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Game_and_Watch_Super_Mario_Bros.PNG"
-            alt="no hay imagen" id="idimagen1">
+       <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Game_and_Watch_Super_Mario_Bros.PNG"
+            alt="no hay imagen" id="idimagen1">-->
         <button
             onclick="document.getElementById('idimagen1').src='https://upload.wikimedia.org/wikipedia/commons/1/1d/Shigeru_Miyamoto_20150610_%28cropped_2%29.jpg'">Cambiar
-            imagen</button>
+            imagen
+        </button>
+
+        <h2>JS Interno Incompleto</h2>
+        <button onclick="sumarNumeros(document.getElementById('idnumero1').value, document.getElementById('idnumero2').value)" >Sumar NUmeros interno imconpleto</button>
+        <label for="" id="idResultado2"></label>
+
+
+        
+        <h2>JS Interno completo</h2>
+        <button onclick="sumarNumerosCompleto()" >Sumar NUmeros interno completo</button>
+        <label for="" id="idResultado2"></label>
+
     </section>
     <footer>Todos los derechos reservados</footer>
 </body>
