@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../js/calculadoraDeber.js">
+
+    </script>
+</head>
+
+
+<body>
+
+    <header>
+        <h1>calculadora</h1>
+    </header>
+    <nav></nav>
+
+    <section>
+
+        <table>
+            <tr>
+                <td><label id="idlabel" for=""></label></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="mostarPantalla('1')">1</button></td>
+                <td><button onclick="mostarPantalla('2')">2</button></td>
+                <td><button onclick="mostarPantalla('3')">3</button></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="mostarPantalla('4')">4</button></td>
+                <td><button onclick="mostarPantalla('5')">5</button></td>
+                <td><button onclick="mostarPantalla('6')">6</button></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="mostarPantalla('7')">7</button></td>
+                <td><button onclick="mostarPantalla('8')">8</button></td>
+                <td><button onclick="mostarPantalla('9')">9</button></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="mostarPantalla('0')">0</button></td>
+                <td><button onclick="mostarPantalla('+')">+</button></td>
+                <td><button onclick="mostarPantalla('-')">-</button></td>
+                
+            </tr>
+
+            <tr>
+                <td><button onclick="mostarPantalla('/')">/</button></td>
+                <td><button onclick="mostarPantalla('*')">*</button></td>
+                <td><button onclick="calcular()">=</button></td>
+                <td><button onclick="limpiar()">C</button></td>
+            </tr>
+        </table>
+
+    </section>
+
+    <footer></footer>
+
+</body>
+
+</html>
