@@ -3,27 +3,29 @@
     justify-content: center;
     align-items: center;
 }
-
+ 
 .calculadora-numeros{
     display: grid;
     grid-template-columns: repeat(3,100px);
     background: blue;
-    padding: 15px 15px 5px 15px;
+    padding: 15px 15px 5px 30px;
     border-radius: 15px;
+  
+    
 }
-
+ 
 .col-3{
     grid-column: span 3;
 }
-
+ 
 .calculadora-operaciones{
     display: grid;
     grid-template-columns: repeat(2,150px);
     background: rgb(101, 101, 240);
-    padding: 15px;
+    padding: 15px 25px 30px 30px;;
     border-radius: 15px;
 }
-
+ 
 .calculadora-general{
     display: grid;
     grid-template-columns: repeat(1,350px);
@@ -31,13 +33,21 @@
    border-radius: 15px;
    box-shadow: 20px 20px 50px 10px rgb(0, 0, 0);
 }
-
+ 
 label{
     height: 20px;
     padding-left: 20px;
+    padding: 20px;
+    background-color: aliceblue;
+    margin: 25px;
 }
-
+ 
 h1{
-    padding-left: 100px;
+    padding-left: 120px;
     color: white;
+}
+ 
+button:hover{
+    background-color: blueviolet;
+    
 }
