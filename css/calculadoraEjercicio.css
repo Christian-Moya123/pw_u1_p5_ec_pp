@@ -26,11 +26,31 @@
 }
 
 button{
+    cursor: pointer;
     margin: 5px;
     padding: 0;
     border-radius: 32px ;
     border: none;
     background-color:#95A4FA ;
     box-shadow: 5px 5px 10px 5px #00000040;
+    font-size: 25px;
 
+}
+
+button:active{
+    background-color: #1E86FA;
+}
+
+.bC{
+    grid-column: span 2;
+}
+
+body{
+    background-color: #8B1EFA;
+}
+
+
+*{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
