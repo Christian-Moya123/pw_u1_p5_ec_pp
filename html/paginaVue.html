@@ -29,10 +29,10 @@
             <hr/>
             <p>{{lista}}</p>
             <label for="idNombre">Nombre</label>
-            <input v-on:keypress="presionandoTecla" type="text" id="idNombre" v-model="nombre">
+            <input v-on:keypress ="presionandoTeclaDesestrcturado" type="text" id="idNombre" v-model="nombre">
 
             <label for="idApellido">Apellido</label>
-            <input v-on:keypress="presionandoEnter" type="text" id="idApellido" v-model="apellido2">
+            <input @keypress.enter ="presionandoTeclaModificador" type="text" id="idApellido" v-model="apellido2">
 
             <button v-on:click="agregarEstudiante()">Agregar</button>
 
@@ -46,8 +46,9 @@
 
                 <h1>Desestrcuturados</h1>
 
-                <li v-for="({nombre, apellido}, index) in lista">{{index}}:{{nombre}} - {{apellido}}
-                    <button>Editar</button>
+                <li v-show="nombre!==''" v-for="({nombre, apellido}, index) in lista">{{index}}:{{nombre}} - {{apellido}}
+                   
+                    <button v-if="nombre!==null">Editar</button>
                 </li>
 
 
