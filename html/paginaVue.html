@@ -46,7 +46,7 @@
 
                 <h1>Desestrcuturados</h1>
 
-                <li v-show="nombre!==''" v-for="({nombre, apellido}, index) in lista">{{index}}:{{nombre}} - {{apellido}}
+                <li v-show="nombre!=='null'" v-for="({nombre, apellido}, index) in lista">{{index}}:{{nombre}} - {{apellido}}
                    
                     <button v-if="nombre!==null">Editar</button>
                 </li>

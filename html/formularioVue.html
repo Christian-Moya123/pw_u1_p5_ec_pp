@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+
+    <link rel="stylesheet" href="../css/estudianteFormularioVue.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="titulo">
+                <h1>Estudiante &#10016</h1>
+            </div>
+        </header>
+        <nav></nav>
+
+        <section>
+
+            <div id="myApp">
+                <form class="form" action="" method="">
+                    <div class="operaciones">
+                        <h2>Nuevo Estudiante</h2>
+
+
+                        <p type="Nombre:"><input type="text" v-model="nombre"></p>
+                        <p type="Apellido:"><input type="text" v-model="apellido"></p>
+                        <p type="Hobby:"><input type="text" v-model="hobby"></p>
+                        <p type="Genero:"><input type="text" v-model="genero"></p>
+                        <p type="Pais:"><input type="text" v-model="pais"></p>
+                        <div class="bot">
+                            <button type="button" @click="ingresarEstudiante">GUARDAR</button>
+
+                        </div>
+
+                       
+                    </div>
+                </form>
+
+                <div v-show="lista.length >1"  class="tabla">
+                    <div class="tablaParametros">
+                        <div class="nombres">Nombre</div>
+                        <div class="nombres">Apellido</div>
+                        <div class="nombres">Hobby</div>
+                        <div class="nombres">Genero</div>
+                        <div class="nombres">Pais</div>
+                    </div>
+
+                    <div  v-for="({nombre,apellido,hobby,genero,pais}, index) in lista" class="tablaResultados">
+                        <div class="nombres">{{nombre}}</div>
+                        <div class="nombres">{{apellido}}</div>
+                        <div class="nombres">{{hobby}}</div>
+                        <div class="nombres">{{genero}}</div>
+                        <div class="nombres">{{pais}}</div>
+                    </div>
+                </div>
+
+
+            </div>
+            <script src="../js/appFormularioVue.js"></script>
+        </section>
+
+        <footer></footer>
+
+    </div>
+
+</body>
+
+</html>
